@@ -5,6 +5,28 @@
 #include <iostream>
 #include <unordered_map>
 
+Archer::Archer()
+	:Player(),
+	AttackCount(3)
+{
+}
+
+Archer::Archer(int maxHp, int maxMp, int attack, int defense, int accuracy, int speed, string name)
+	:Player(maxHp, maxMp, attack, defense, accuracy, speed, name),
+	AttackCount(3)
+{
+}
+
+Archer::Archer(const Stats& stats, string name)
+	:Player(stats, name),
+	AttackCount(3)
+{
+}
+
+Archer::~Archer()
+{
+}
+
 void Archer::Attack(Character* Other, SkillIdx skillIdx)
 {
 	if (skillIdx >= SkillIdx::SkillMax)
@@ -44,7 +66,6 @@ void Archer::Attack(Character* Other, SkillIdx skillIdx)
 	break;
 	}
 
-	const int AttackCount = 3;
 	cout << "궁수는 총 대미지의 " << AttackCount << "분의 1로 " << AttackCount << "만큼 연타합니다!" << '\n';
 	for (int i = 0; i < AttackCount; i++)
 		Other->Hit(this,nowDamage / AttackCount);

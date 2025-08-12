@@ -6,6 +6,25 @@
 #include <unordered_map>
 #include"Player.h"
 
+Monster::Monster()
+	:Character()
+{
+}
+
+Monster::Monster(int maxHp, int maxMp, int attack, int defense, int accuracy, int speed, string name)
+	:Character(maxHp, maxMp, attack, defense, accuracy, speed, name)
+{
+}
+
+Monster::Monster(const Stats& stats, string name)
+	:Character(stats, name)
+{
+}
+
+Monster::~Monster()
+{
+}
+
 void Monster::Attack(Character* Other, SkillIdx skillIdx)
 {
 	int nowDamage = static_cast<int>(Skills[skillIdx].DamageRate * static_cast<double>(GetAttack()));

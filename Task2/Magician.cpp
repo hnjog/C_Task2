@@ -5,6 +5,28 @@
 #include <iostream>
 #include <unordered_map>
 
+Magician::Magician()
+	:Player(),
+	AddSkillRate(1.2)
+{
+}
+
+Magician::Magician(int maxHp, int maxMp, int attack, int defense, int accuracy, int speed, string name)
+	:Player(maxHp, maxMp, attack, defense, accuracy, speed, name),
+	AddSkillRate(1.2)
+{
+}
+
+Magician::Magician(const Stats& stats, string name)
+	:Player(stats, name),
+	AddSkillRate(1.2)
+{
+}
+
+Magician::~Magician()
+{
+}
+
 void Magician::Attack(Character* Other, SkillIdx skillIdx)
 {
 	if (skillIdx >= SkillIdx::SkillMax)
@@ -25,7 +47,6 @@ void Magician::Attack(Character* Other, SkillIdx skillIdx)
 	}
 
 	cout << "마법사 공격 시 추가 스킬 공격력을 가집니다!" << '\n';
-	const double AddSkillRate = 1.2;
 
 	int nowDamage = static_cast<int>((Skills[skillIdx].DamageRate + AddSkillRate) * static_cast<double>(GetAttack()));
 

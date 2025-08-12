@@ -5,6 +5,28 @@
 #include <iostream>
 #include <unordered_map>
 
+Warrior::Warrior()
+	:Player(),
+	AddDamage(10)
+{
+}
+
+Warrior::Warrior(int maxHp, int maxMp, int attack, int defense, int accuracy, int speed, string name)
+	:Player(maxHp, maxMp, attack, defense, accuracy, speed, name),
+	AddDamage(10)
+{
+}
+
+Warrior::Warrior(const Stats& stats, string name)
+	:Player(stats, name),
+	AddDamage(10)
+{
+}
+
+Warrior::~Warrior()
+{
+}
+
 void Warrior::Attack(Character* Other, SkillIdx skillIdx)
 {
 	if (skillIdx >= SkillIdx::SkillMax)
@@ -25,7 +47,7 @@ void Warrior::Attack(Character* Other, SkillIdx skillIdx)
 	}
 
 	cout << "전사는 공격 시 추가 공격력을 가집니다!" << '\n';
-	const int AddDamage = 10;
+	
 
 	int nowDamage = static_cast<int>(Skills[skillIdx].DamageRate * static_cast<double>(GetAttack()));
 	nowDamage += AddDamage;
