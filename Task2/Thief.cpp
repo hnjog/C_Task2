@@ -9,18 +9,21 @@ Thief::Thief()
 	:Player(),
 	AttackCount(5)
 {
+	MyClass = CLI_Thief;
 }
 
 Thief::Thief(int maxHp, int maxMp, int attack, int defense, int accuracy, int speed, string name)
 	:Player(maxHp, maxMp, attack, defense, accuracy, speed, name),
 	AttackCount(5)
 {
+	MyClass = CLI_Thief;
 }
 
 Thief::Thief(const Stats& stats, string name)
 	:Player(stats, name),
 	AttackCount(5)
 {
+	MyClass = CLI_Thief;
 }
 
 Thief::~Thief()

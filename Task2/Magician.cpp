@@ -9,18 +9,21 @@ Magician::Magician()
 	:Player(),
 	AddSkillRate(1.2)
 {
+	MyClass = CLI_Magician;
 }
 
 Magician::Magician(int maxHp, int maxMp, int attack, int defense, int accuracy, int speed, string name)
 	:Player(maxHp, maxMp, attack, defense, accuracy, speed, name),
 	AddSkillRate(1.2)
 {
+	MyClass = CLI_Magician;
 }
 
 Magician::Magician(const Stats& stats, string name)
 	:Player(stats, name),
 	AddSkillRate(1.2)
 {
+	MyClass = CLI_Magician;
 }
 
 Magician::~Magician()

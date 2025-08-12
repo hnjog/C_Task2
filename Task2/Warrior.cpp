@@ -9,18 +9,21 @@ Warrior::Warrior()
 	:Player(),
 	AddDamage(10)
 {
+	MyClass = CLI_Warrior;
 }
 
 Warrior::Warrior(int maxHp, int maxMp, int attack, int defense, int accuracy, int speed, string name)
 	:Player(maxHp, maxMp, attack, defense, accuracy, speed, name),
 	AddDamage(10)
 {
+	MyClass = CLI_Warrior;
 }
 
 Warrior::Warrior(const Stats& stats, string name)
 	:Player(stats, name),
 	AddDamage(10)
 {
+	MyClass = CLI_Warrior;
 }
 
 Warrior::~Warrior()

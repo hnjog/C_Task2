@@ -24,10 +24,10 @@ enum SkillIdx
 
 enum ClassIdx
 {
-	Nobiss,
-	Warrior,
-	Magician,
-	Thief,
-	Archer,
-	ClassMax,
+	CLI_Nobiss,
+	CLI_Warrior,
+	CLI_Magician,
+	CLI_Thief,
+	CLI_Archer,
+	CLI_ClassMax,
 };

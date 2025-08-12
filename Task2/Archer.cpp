@@ -9,18 +9,21 @@ Archer::Archer()
 	:Player(),
 	AttackCount(3)
 {
+	MyClass = CLI_Archer;
 }
 
 Archer::Archer(int maxHp, int maxMp, int attack, int defense, int accuracy, int speed, string name)
 	:Player(maxHp, maxMp, attack, defense, accuracy, speed, name),
 	AttackCount(3)
 {
+	MyClass = CLI_Archer;
 }
 
 Archer::Archer(const Stats& stats, string name)
 	:Player(stats, name),
 	AttackCount(3)
 {
+	MyClass = CLI_Archer;
 }
 
 Archer::~Archer()

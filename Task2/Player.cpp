@@ -9,7 +9,7 @@
 Player::Player()
 	:Character(),
 	MyInventory(new Inventory(this)),
-	MyClass(ClassIdx::Nobiss),
+	MyClass(ClassIdx::CLI_Nobiss),
 	Level(1)
 {
 }
@@ -17,7 +17,7 @@ Player::Player()
 Player::Player(int maxHp, int maxMp, int attack, int defense, int accuracy, int speed, string name)
 	:Character(maxHp, maxMp, attack, defense,accuracy,speed, name),
 	MyInventory(new Inventory(this)),
-	MyClass(ClassIdx::Nobiss),
+	MyClass(ClassIdx::CLI_Nobiss),
 	Level(1)
 {
 }
@@ -25,7 +25,7 @@ Player::Player(int maxHp, int maxMp, int attack, int defense, int accuracy, int 
 Player::Player(const Stats& stats, string name)
 	:Character(stats,name),
 	MyInventory(new Inventory(this)),
-	MyClass(ClassIdx::Nobiss),
+	MyClass(ClassIdx::CLI_Nobiss),
 	Level(1)
 {
 }
@@ -126,17 +126,17 @@ string Player::GetJobName()
 {
 	switch (MyClass)
 	{
-	case Nobiss:
+	case CLI_Nobiss:
 		return "초보자";
-	case Warrior:
+	case CLI_Warrior:
 		return "전사";
-	case Magician:
+	case CLI_Magician:
 		return "마법사";
-	case Thief:
+	case CLI_Thief:
 		return "도적";
-	case Archer:
+	case CLI_Archer:
 		return "궁수";
-	case ClassMax:
+	case CLI_ClassMax:
 	default:
 		break;
 	}
