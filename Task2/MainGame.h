@@ -14,6 +14,6 @@ protected:
 	void GameSetting();
 protected:
 	class Player* MyPlayer;
-	class Player* tester;
+	class Monster* MyMonster;
 };
 
