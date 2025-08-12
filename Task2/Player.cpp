@@ -8,19 +8,25 @@
 
 Player::Player()
 	:Character(),
-	MyInventory(new Inventory(this))
+	MyInventory(new Inventory(this)),
+	MyClass(ClassIdx::Nobiss),
+	Level(1)
 {
 }
 
 Player::Player(int maxHp, int maxMp, int attack, int defense, string name)
 	:Character(maxHp, maxMp, attack, defense, name),
-	MyInventory(new Inventory(this))
+	MyInventory(new Inventory(this)),
+	MyClass(ClassIdx::Nobiss),
+	Level(1)
 {
 }
 
 Player::Player(const Stats& stats, string name)
 	:Character(stats,name),
-	MyInventory(new Inventory(this))
+	MyInventory(new Inventory(this)),
+	MyClass(ClassIdx::Nobiss),
+	Level(1)
 {
 }
 
@@ -104,4 +110,26 @@ void Player::Attack(Character* Other, SkillIdx skillIdx)
 void Player::Hit(int damage)
 {
 	CurrentHp -= (damage - GetDefense());
+}
+
+string Player::GetJobName()
+{
+	switch (MyClass)
+	{
+	case Nobiss:
+		return "Nobiss";
+	case Warrior:
+		return "Warrior";
+	case Magician:
+		return "Magician";
+	case Thief:
+		return "Thief";
+	case Archer:
+		return "Archer";
+	case ClassMax:
+	default:
+		break;
+	}
+
+	return "SomeThingIsWrong";
 }

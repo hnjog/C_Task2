@@ -25,8 +25,12 @@ public:
 	inline void HalfHp() { CurrentHp = GetMaxHp() / 2; }
 	inline void HalfMp() { CurrentMp = GetMaxMp() / 2; }
 
+	string GetJobName();
+
 protected:
 	Inventory* MyInventory;
 
+	ClassIdx MyClass;
+	int Level;
 };
 
