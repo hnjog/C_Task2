@@ -41,8 +41,8 @@ public:
 	Character(const Stats& stats, string name);
 	virtual ~Character();
 
-	virtual void Attack(Character* Other, SkillIdx skillIdx);
-	virtual void Hit(int damage);
+	virtual void Attack(Character* Other, SkillIdx skillIdx) = 0;
+	virtual void Hit(int damage) = 0;
 
 	void AddSkill(SkillIdx skillIdx, Skill&& skill);
 

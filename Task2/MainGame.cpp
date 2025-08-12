@@ -9,7 +9,7 @@
 MainGame::MainGame()
 	:MyPlayer(nullptr)
 {
-	tester = new Character(1000,1000,40,0,"Tester");
+	tester = new Player(1000,1000,40,0,"Tester");
 	tester->AddSkill(SkillIdx::BaseAttack, { 2.0,0 });
 }
 
