@@ -69,6 +69,9 @@ public:
 	inline bool FullHp() { return CurrentHp == GetMaxHp(); }
 	inline bool FullMp() { return CurrentMp == GetMaxMp(); }
 
+	inline void SetName(string& name) { Name = name; }
+	inline void SetName(string&& name) { Name = move(name); }
+
 protected:
 	int CurrentHp;
 	int CurrentMp;
