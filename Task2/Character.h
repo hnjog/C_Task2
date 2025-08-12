@@ -1,4 +1,4 @@
-﻿#pragma once
+#pragma once
 
 #include <unordered_map>
 #include <string>
@@ -49,7 +49,7 @@ public:
 	virtual ~Character();
 
 	virtual void Attack(Character* Other, SkillIdx skillIdx) = 0;
-	virtual void Hit(int damage) = 0;
+	virtual void Hit(Character* Hitter, int damage) = 0;
 
 	void AddSkill(SkillIdx skillIdx, Skill&& skill);
 

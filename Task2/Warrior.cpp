@@ -48,5 +48,5 @@ void Warrior::Attack(Character* Other, SkillIdx skillIdx)
 	break;
 	}
 
-	Other->Hit(nowDamage);
+	Other->Hit(this, nowDamage);
 }

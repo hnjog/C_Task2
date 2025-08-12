@@ -47,5 +47,5 @@ void Archer::Attack(Character* Other, SkillIdx skillIdx)
 	const int AttackCount = 3;
 	cout << "궁수는 총 대미지의 " << AttackCount << "분의 1로 " << AttackCount << "만큼 연타합니다!" << '\n';
 	for (int i = 0; i < AttackCount; i++)
-		Other->Hit(nowDamage / AttackCount);
+		Other->Hit(this,nowDamage / AttackCount);
 }

@@ -47,5 +47,5 @@ void Thief::Attack(Character* Other, SkillIdx skillIdx)
 	const int AttackCount = 5;
 	cout << "도적은 총 대미지의 " << AttackCount << "분의 1로 " << AttackCount << "만큼 연타합니다!" << '\n';
 	for(int i = 0; i < AttackCount;i++)
-		Other->Hit(nowDamage / AttackCount);
+		Other->Hit(this,nowDamage / AttackCount);
 }

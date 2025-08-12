@@ -104,10 +104,10 @@ void Player::Attack(Character* Other, SkillIdx skillIdx)
 	break;
 	}
 
-	Other->Hit(nowDamage);
+	Other->Hit(this,nowDamage);
 }
 
-void Player::Hit(int damage)
+void Player::Hit(Character* Hitter, int damage)
 {
 	int damageResult = (damage - GetDefense());
 	if (damageResult <= 0)
