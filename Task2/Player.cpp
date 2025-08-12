@@ -109,11 +109,17 @@ void Player::Attack(Character* Other, SkillIdx skillIdx)
 
 void Player::Hit(Character* Hitter, int damage)
 {
+	if (IsNotValid(Hitter))
+		return;
+
 	int damageResult = (damage - GetDefense());
 	if (damageResult <= 0)
 		damageResult = 1;
 	CurrentHp -= damageResult;
 
+	cout << Hitter->GetName() << "에게 공격받음!" << '\n';
+	cout << "총 대미지 : " << damageResult << '\n';
+	cout << GetName() << "의 현재 체력 : " << GetNowHp() << '\n';
 }
 
 string Player::GetJobName()
