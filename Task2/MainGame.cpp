@@ -9,7 +9,7 @@
 MainGame::MainGame()
 	:MyPlayer(nullptr)
 {
-	tester = new Player(1000,1000,40,0,"Tester");
+	tester = new Player(1000,1000,40,0,100,10,"Tester");
 	tester->AddSkill(SkillIdx::BaseAttack, { 2.0,0 });
 }
 
@@ -43,11 +43,21 @@ void MainGame::GameSetting()
 		}
 	}
 
+	int accuracy = 0, speed = 0;
+	while (accuracy < 30 || speed < 30)
+	{
+		cout << "정확도와 속도를 입력해주세요:";
+		cin >> accuracy >> speed;
+		if (accuracy < 30 || speed < 30)
+		{
+			cout << "정확도나 속도의 값이 너무 작습니다. 다시 입력해주세요." << '\n';
+		}
+	}
 	
-	cout << "마지막으로 이름을 입력해주세요:";
+	cout << "마지막으로 당신의 이름을 입력해주세요:";
 	string name;
 	cin >> name;
-	MyPlayer = new Player(hp, mp, attack, defense, name);
+	MyPlayer = new Player(hp, mp, attack, defense,accuracy,speed, name);
 
 	MyPlayer->AddSkill(SkillIdx::BaseAttack, { 2,50 });
 	MyPlayer->AddSkill(SkillIdx::LethalAttack, { 3,0 });

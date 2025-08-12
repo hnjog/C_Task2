@@ -1,4 +1,4 @@
-﻿#include "Player.h"
+#include "Player.h"
 #include "Inventory.h"
 #include "Util.h"
 #include "Enums.h"
@@ -14,8 +14,8 @@ Player::Player()
 {
 }
 
-Player::Player(int maxHp, int maxMp, int attack, int defense, string name)
-	:Character(maxHp, maxMp, attack, defense, name),
+Player::Player(int maxHp, int maxMp, int attack, int defense, int accuracy, int speed, string name)
+	:Character(maxHp, maxMp, attack, defense,accuracy,speed, name),
 	MyInventory(new Inventory(this)),
 	MyClass(ClassIdx::Nobiss),
 	Level(1)

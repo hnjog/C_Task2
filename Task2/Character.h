@@ -15,6 +15,8 @@ struct Stats
 	int MaxMp;
 	int Attack;
 	int Defense;
+	int Accuracy;
+	int Speed;
 
 	Stats()
 	{
@@ -22,14 +24,18 @@ struct Stats
 		MaxMp = 0;
 		Attack = 0;
 		Defense = 0;
+		Accuracy = 0;
+		Speed = 0;
 	}
 
-	Stats(int maxHp,int maxMp, int attack, int defense)
+	Stats(int maxHp,int maxMp, int attack, int defense,int accuracy,int speed)
 	{
 		MaxHp = maxHp;
 		MaxMp = maxMp;
 		Attack = attack;
 		Defense = defense;
+		Accuracy = accuracy;
+		Speed = speed;
 	}
 
 };
@@ -38,7 +44,7 @@ class Character
 {
 public:
 	Character();
-	Character(int maxHp, int maxMp, int attack, int defense, string name);
+	Character(int maxHp, int maxMp, int attack, int defense, int accuracy, int speed, string name);
 	Character(const Stats& stats, string name);
 	virtual ~Character();
 
@@ -64,6 +70,8 @@ public:
 
 	inline int GetAttack() { return BaseStat->Attack + EnhancedStat->Attack; }
 	inline int GetDefense() { return BaseStat->Defense + EnhancedStat->Defense; }
+	inline int GetAccuracy() { return BaseStat->Accuracy + EnhancedStat->Accuracy; }
+	inline int GetSpeed() { return BaseStat->Speed + EnhancedStat->Speed; }
 
 	inline const string& GetString() { return Name; }
 
@@ -105,6 +113,39 @@ public:
 			EnhancedStat->Defense = defense;
 		}
 	}
+
+	inline void SetAccuracyBase(int accuracy)
+	{
+		if (IsNotValid(BaseStat) == false)
+		{
+			BaseStat->Accuracy = accuracy;
+		}
+	}
+
+	inline void SetSpeedBase(int speed)
+	{
+		if (IsNotValid(BaseStat) == false)
+		{
+			BaseStat->Speed = speed;
+		}
+	}
+
+	inline void SetAccuracyEnhanced(int accuracy)
+	{
+		if (IsNotValid(EnhancedStat) == false)
+		{
+			EnhancedStat->Accuracy = accuracy;
+		}
+	}
+
+	inline void SetSpeedEnhanced(int speed)
+	{
+		if (IsNotValid(EnhancedStat) == false)
+		{
+			EnhancedStat->Speed = speed;
+		}
+	}
+	
 
 protected:
 	int CurrentHp;

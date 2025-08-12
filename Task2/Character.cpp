@@ -4,14 +4,14 @@
 #include <iostream>
 
 Character::Character()
-	: Character(0, 0, 0, 0, string{})
+	: Character(0, 0, 0, 0,0,0, string{})
 {
 }
 
-Character::Character(int maxHp, int maxMp, int attack, int defense, string name)
+Character::Character(int maxHp, int maxMp, int attack, int defense, int accuracy, int speed, string name)
 	: CurrentHp(maxHp),
 	CurrentMp(maxMp),
-	BaseStat(new Stats{ maxHp, maxMp, attack, defense }),
+	BaseStat(new Stats{ maxHp, maxMp, attack, defense,accuracy,speed }),
 	EnhancedStat(new Stats{}),
 	Name(move(name))
 {
@@ -21,7 +21,7 @@ Character::Character(int maxHp, int maxMp, int attack, int defense, string name)
 // 사실 함수 지역 변수에 string 의 이동 생성자로 그 값이 들어가기에 타입상 문제가 없어보임
 // 지역변수 name <- move(외부 outername) 
 Character::Character(const Stats& stats, string name)
-	:Character(stats.MaxHp, stats.MaxMp, stats.Attack, stats.Defense, move(name))
+	:Character(stats.MaxHp, stats.MaxMp, stats.Attack, stats.Defense, stats.Accuracy, stats.Speed, move(name))
 {
 }
 
