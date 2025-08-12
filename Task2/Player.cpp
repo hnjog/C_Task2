@@ -109,7 +109,11 @@ void Player::Attack(Character* Other, SkillIdx skillIdx)
 
 void Player::Hit(int damage)
 {
-	CurrentHp -= (damage - GetDefense());
+	int damageResult = (damage - GetDefense());
+	if (damageResult <= 0)
+		damageResult = 1;
+	CurrentHp -= damageResult;
+
 }
 
 string Player::GetJobName()
