@@ -43,7 +43,11 @@ void Monster::Hit(Character* Hitter, int damage)
 	int damageResult = (damage - GetDefense());
 	if (damageResult <= 0)
 		damageResult = 1;
+
 	CurrentHp -= damageResult;
+
+	if (CurrentHp < 0)
+		CurrentHp = 0;
 
 	cout << Hitter->GetName() << "에게 공격받음!" << '\n';
 	cout << "총 대미지 : " << damageResult << '\n';

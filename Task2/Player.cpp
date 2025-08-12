@@ -117,6 +117,9 @@ void Player::Hit(Character* Hitter, int damage)
 		damageResult = 1;
 	CurrentHp -= damageResult;
 
+	if (CurrentHp < 0)
+		CurrentHp = 0;
+
 	cout << Hitter->GetName() << "에게 공격받음!" << '\n';
 	cout << "총 대미지 : " << damageResult << '\n';
 	cout << GetName() << "의 현재 체력 : " << GetNowHp() << '\n';
