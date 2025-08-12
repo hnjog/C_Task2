@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 
 #include <unordered_map>
 #include <string>
@@ -73,7 +73,7 @@ public:
 	inline int GetAccuracy() { return BaseStat->Accuracy + EnhancedStat->Accuracy; }
 	inline int GetSpeed() { return BaseStat->Speed + EnhancedStat->Speed; }
 
-	inline const string& GetString() { return Name; }
+	inline const string& GetName() { return Name; }
 
 	inline bool FullHp() { return CurrentHp == GetMaxHp(); }
 	inline bool FullMp() { return CurrentMp == GetMaxMp(); }
