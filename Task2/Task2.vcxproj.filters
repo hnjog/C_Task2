@@ -29,7 +29,9 @@
     <ClCompile Include="Archer.cpp">
       <Filter>Characters</Filter>
     </ClCompile>
-    <ClCompile Include="Monster.cpp" />
+    <ClCompile Include="Monster.cpp">
+      <Filter>Characters</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Character.h">
@@ -65,7 +67,9 @@
     <ClInclude Include="Archer.h">
       <Filter>Characters</Filter>
     </ClInclude>
-    <ClInclude Include="Monster.h" />
+    <ClInclude Include="Monster.h">
+      <Filter>Characters</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Characters">
