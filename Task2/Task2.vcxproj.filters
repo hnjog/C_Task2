@@ -20,6 +20,16 @@
     <ClCompile Include="MainGame.cpp">
       <Filter>GameMode</Filter>
     </ClCompile>
+    <ClCompile Include="Magician.cpp">
+      <Filter>Characters</Filter>
+    </ClCompile>
+    <ClCompile Include="Thief.cpp">
+      <Filter>Characters</Filter>
+    </ClCompile>
+    <ClCompile Include="Archer.cpp">
+      <Filter>Characters</Filter>
+    </ClCompile>
+    <ClCompile Include="Monster.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Character.h">
@@ -46,6 +56,16 @@
     <ClInclude Include="MainGame.h">
       <Filter>GameMode</Filter>
     </ClInclude>
+    <ClInclude Include="Magician.h">
+      <Filter>Characters</Filter>
+    </ClInclude>
+    <ClInclude Include="Thief.h">
+      <Filter>Characters</Filter>
+    </ClInclude>
+    <ClInclude Include="Archer.h">
+      <Filter>Characters</Filter>
+    </ClInclude>
+    <ClInclude Include="Monster.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Characters">

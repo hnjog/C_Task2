@@ -123,21 +123,29 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Archer.cpp" />
     <ClCompile Include="Character.cpp" />
     <ClCompile Include="Inventory.cpp" />
+    <ClCompile Include="Magician.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="MainGame.cpp" />
+    <ClCompile Include="Monster.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="Skill.cpp" />
+    <ClCompile Include="Thief.cpp" />
     <ClCompile Include="Warrior.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Archer.h" />
     <ClInclude Include="Character.h" />
     <ClInclude Include="Enums.h" />
     <ClInclude Include="Inventory.h" />
+    <ClInclude Include="Magician.h" />
     <ClInclude Include="MainGame.h" />
+    <ClInclude Include="Monster.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="Skill.h" />
+    <ClInclude Include="Thief.h" />
     <ClInclude Include="Util.h" />
     <ClInclude Include="Warrior.h" />
   </ItemGroup>
