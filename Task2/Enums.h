@@ -21,3 +21,13 @@ enum SkillIdx
 	LethalAttack,
 	SkillMax,
 };
+
+enum ClassIdx
+{
+	Nobiss,
+	Warrior,
+	Magician,
+	Thief,
+	Archer,
+	ClassMax,
+};
