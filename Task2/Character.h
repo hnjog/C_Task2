@@ -3,6 +3,7 @@
 #include <unordered_map>
 #include <string>
 #include "Enums.h"
+#include "Util.h"
 
 using namespace std;
 
@@ -69,8 +70,41 @@ public:
 	inline bool FullHp() { return CurrentHp == GetMaxHp(); }
 	inline bool FullMp() { return CurrentMp == GetMaxMp(); }
 
+public:
 	inline void SetName(string& name) { Name = name; }
 	inline void SetName(string&& name) { Name = move(name); }
+
+	inline void SetAttackBase(int attack)
+	{
+		if (IsNotValid(BaseStat) == false)
+		{
+			BaseStat->Attack = attack;
+		}
+	}
+
+	inline void SetDefenseBase(int defense)
+	{
+		if (IsNotValid(BaseStat) == false)
+		{
+			BaseStat->Defense = defense;
+		}
+	}
+
+	inline void SetAttackEnhanced(int attack)
+	{
+		if (IsNotValid(EnhancedStat) == false)
+		{
+			EnhancedStat->Attack = attack;
+		}
+	}
+
+	inline void SetDefenseEnhanced(int defense)
+	{
+		if (IsNotValid(EnhancedStat) == false)
+		{
+			EnhancedStat->Defense = defense;
+		}
+	}
 
 protected:
 	int CurrentHp;
