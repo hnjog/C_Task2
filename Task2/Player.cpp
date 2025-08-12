@@ -117,21 +117,21 @@ string Player::GetJobName()
 	switch (MyClass)
 	{
 	case Nobiss:
-		return "Nobiss";
+		return "초보자";
 	case Warrior:
-		return "Warrior";
+		return "전사";
 	case Magician:
-		return "Magician";
+		return "마법사";
 	case Thief:
-		return "Thief";
+		return "도적";
 	case Archer:
-		return "Archer";
+		return "궁수";
 	case ClassMax:
 	default:
 		break;
 	}
 
-	return "SomeThingIsWrong";
+	return "뭔가 잘못됐는대요?";
 }
 
 void Player::PrintPlayerStatus()
