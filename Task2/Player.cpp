@@ -1,4 +1,4 @@
-#include "Player.h"
+﻿#include "Player.h"
 #include "Inventory.h"
 #include "Util.h"
 #include "Enums.h"
@@ -132,4 +132,20 @@ string Player::GetJobName()
 	}
 
 	return "SomeThingIsWrong";
+}
+
+void Player::PrintPlayerStatus()
+{
+	cout << "------------------------------------" << endl;
+	cout << "* 현재 능력치" << endl;
+	cout << "닉네임: " << Name << endl;
+	cout << "직업: " << GetJobName() << endl;
+	cout << "Lv. " << Level << endl;
+	cout << "HP: " << GetNowHp() << endl;
+	cout << "MP: " << GetNowMp() << endl;
+	cout << "공격력: " << GetAttack() << endl;
+	cout << "방어력: " << GetDefense() << endl;
+	cout << "정확도: " << GetAccuracy() << endl;
+	cout << "속도: " << GetSpeed() << endl;
+	cout << "------------------------------------" << endl;
 }

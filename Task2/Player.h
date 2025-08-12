@@ -27,6 +27,7 @@ public:
 
 	string GetJobName();
 
+	void PrintPlayerStatus();
 protected:
 	Inventory* MyInventory;
 
