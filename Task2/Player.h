@@ -9,7 +9,7 @@ class Player :
 {
 public:
 	Player();
-	Player(int maxHp, int maxMp, int attack, int defense, string name);
+	Player(int maxHp, int maxMp, int attack, int defense, int accuracy, int speed, string name);
 	Player(const Stats& stats, string name);
 	virtual ~Player();
 
