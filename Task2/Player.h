@@ -19,8 +19,8 @@ public:
 
 	int GetItemCount(ItemIdx item);
 
-	virtual void Attack(Character* Other, SkillIdx skillIdx);
-	virtual void Hit(int damage);
+	virtual void Attack(Character* Other, SkillIdx skillIdx) override;
+	virtual void Hit(int damage)override;
 
 	inline void HalfHp() { CurrentHp = GetMaxHp() / 2; }
 	inline void HalfMp() { CurrentMp = GetMaxMp() / 2; }

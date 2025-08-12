@@ -2,7 +2,6 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <ClCompile Include="Main.cpp" />
-    <ClCompile Include="MainGame.cpp" />
     <ClCompile Include="Character.cpp">
       <Filter>Characters</Filter>
     </ClCompile>
@@ -15,11 +14,14 @@
     <ClCompile Include="Skill.cpp">
       <Filter>Skill</Filter>
     </ClCompile>
+    <ClCompile Include="Warrior.cpp">
+      <Filter>Characters</Filter>
+    </ClCompile>
+    <ClCompile Include="MainGame.cpp">
+      <Filter>GameMode</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Enums.h" />
-    <ClInclude Include="MainGame.h" />
-    <ClInclude Include="Util.h" />
     <ClInclude Include="Character.h">
       <Filter>Characters</Filter>
     </ClInclude>
@@ -32,6 +34,18 @@
     <ClInclude Include="Skill.h">
       <Filter>Skill</Filter>
     </ClInclude>
+    <ClInclude Include="Warrior.h">
+      <Filter>Characters</Filter>
+    </ClInclude>
+    <ClInclude Include="Util.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Enums.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="MainGame.h">
+      <Filter>GameMode</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Characters">
@@ -42,6 +56,12 @@
     </Filter>
     <Filter Include="Skill">
       <UniqueIdentifier>{5ea3871b-e051-4569-a876-440f5663361c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utils">
+      <UniqueIdentifier>{3c59d09a-762d-4f15-b7c3-376eb314220b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameMode">
+      <UniqueIdentifier>{a4a755c7-3e15-4def-b1bc-d4cf7602f5c5}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
